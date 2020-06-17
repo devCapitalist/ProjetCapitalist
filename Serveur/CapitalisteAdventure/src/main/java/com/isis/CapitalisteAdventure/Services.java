@@ -13,26 +13,25 @@ import javax.xml.bind.Unmarshaller;
 import java.io.*;
 
 public class Services {
-    public World readWorldFromXml(String username){
+    public World readWorldFromXml(String username) {
         InputStream input = null;
         String file = "";
         JAXBContext jaxbContext;
         Unmarshaller u;
         World w;
 
-        if (username != null){
+        if (username != null) {
             file = username + "-" + "world.xml";
 
-            try{
+            try {
                 input = new FileInputStream(file);
-            }
-            catch (FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
                 System.out.println(file);
                 e.printStackTrace();
             }
         }
 
-        if (input == null){
+        if (input == null) {
             input = getClass().getClassLoader().getResourceAsStream("world.xml");
 
         }
@@ -41,14 +40,13 @@ public class Services {
             return null;
         }
 
-        try{
+        try {
             jaxbContext = JAXBContext.newInstance(World.class);
             u = jaxbContext.createUnmarshaller();
-            w=(World) u.unmarshal(input);
+            w = (World) u.unmarshal(input);
             input.close();
             return w;
-        }
-        catch(JAXBException | IOException e) {
+        } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
         return null;
@@ -60,17 +58,17 @@ public class Services {
         return (World) u.unmarshal(input);*/
     }
 
-    public void saveWorldToXml(String Username, World world) throws JAXBException{
+    public void saveWorldToXml(String Username, World world) throws JAXBException {
         OutputStream output;
         JAXBContext j;
         Marshaller m;
 
-        if (Username==null)
+        if (Username == null)
             return;
 
-        String filename= Username + "-" + "world.xml";
+        String filename = Username + "-" + "world.xml";
 
-        try{
+        try {
             output = new FileOutputStream(filename);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -78,8 +76,8 @@ public class Services {
         }
 
         try {
-            j=JAXBContext.newInstance(World.class);
-            m=j.createMarshaller();
+            j = JAXBContext.newInstance(World.class);
+            m = j.createMarshaller();
             m.marshal(world, output);
             output.close();
         } catch (IOException e) {
@@ -91,24 +89,58 @@ public class Services {
 
     }
 
-    public World getWorld(String username){
+    public World getWorld(String username) {
         if (username == null)
-            username="";
+            username = "";
 
-        World world =readWorldFromXml(username);
-        if(world.getLastupdate()==0){
+        World world = readWorldFromXml(username);
+        if (world.getLastupdate() == 0) {
             world.setLastupdate(System.currentTimeMillis());
         }
+
+        updateScore(world);
 
         return world;
     }
 
-    public ProductType findProductById(World w, int Id){
+    private void updateScore(World world) {
+        long tempsActuel = System.currentTimeMillis();
+        long tempsEcoule = tempsActuel - world.getLastupdate();
+        long tempsRestant;
+        int qtProduit;
+        double gain;
+        world.setLastupdate(tempsActuel);
+        for (ProductType p : world.getProducts().getProduct()) {
+            tempsRestant = tempsEcoule - p.getTimeleft();
+            if (tempsRestant < 0)
+                p.setTimeleft(p.getTimeleft() - tempsEcoule);
+            else {
+                qtProduit = 0;
+                if (p.isManagerUnlocked()) {
+                    qtProduit = ((int) tempsRestant / p.getVitesse()) + 1;
+                    p.setTimeleft((p.getVitesse() - tempsRestant % p.getVitesse()));
+                } else if (p.getTimeleft() > 0) {
+                    qtProduit = 1;
+                    p.setTimeleft(0);
+                }
+                gain = qtProduit * p.getQuantite() * p.getRevenu();
+                gain += gain * (world.getActiveangels() * world.getAngelbonus() / 100);
+                world.setMoney(world.getMoney() + gain);
+                world.setScore(world.getScore() + gain);
+
+            }
+
+        }
+
+
+    }
+
+    public ProductType findProductById(World w, int Id) {
         for (ProductType p : w.getProducts().getProduct()) {
             if (p.getId() == Id)
                 return p;
         }
-         return null;
+        return null;
     }
 
     public PallierType findManagerByName(World w, String name) {
@@ -119,14 +151,19 @@ public class Services {
         return null;
     }
 
-    public Boolean updateProduct(String username, ProductType newproduct) throws JAXBException{
+    public Boolean updateProduct(String username, ProductType newproduct) throws JAXBException {
+        //le modifier pour qu’elle vérifie et applique les
+        //unlocks à chaque quantité de produit acheté.
+
         World world = getWorld(username);
-        ProductType product = findProductById(world, newproduct.getId()) ;
-        if (product == null) { return false;}
+        ProductType product = findProductById(world, newproduct.getId());
+        if (product == null) {
+            return false;
+        }
 
         int qtchange = newproduct.getQuantite() - product.getQuantite();
         if (qtchange > 0) {
-            world.setMoney(world.getMoney()-qtchange*newproduct.getCout());
+            world.setMoney(world.getMoney() - qtchange * newproduct.getCout());
         } else {
             product.setTimeleft(newproduct.getVitesse());
         }
@@ -136,7 +173,7 @@ public class Services {
         return true;
     }
 
-    public Boolean updateManager(String username, PallierType newmanager) throws JAXBException{
+    public Boolean updateManager(String username, PallierType newmanager) throws JAXBException {
         // aller chercher le monde qui correspond au joueur
         World world = getWorld(username);
         // trouver dans ce monde, le manager équivalent à celui passé
@@ -159,11 +196,44 @@ public class Services {
         //newmanager.setUnlocked(true);
 
         // soustraire de l'argent du joueur le cout du manager
-        world.setMoney(world.getMoney()-newmanager.getSeuil());
+        world.setMoney(world.getMoney() - newmanager.getSeuil());
 
         // sauvegarder les changements au monde
         saveWorldToXml(username, world);
         return true;
     }
-    
+
+    public boolean resetWorld(String username) throws JAXBException {
+        World w = getWorld(username);
+        double angelDemande =
+                Math.round(150 * Math.sqrt(w.getScore()
+                        / Math.pow(10, 15))) - w.getTotalangels();
+        if (angelDemande < 0)
+            angelDemande = 0;
+        double angelTotal = angelDemande + w.getTotalangels();
+        double angelActive = w.getActiveangels() + angelDemande;
+
+        World nouveauMonde = readWorldFromXml(null);
+        nouveauMonde.setTotalangels(angelTotal);
+        nouveauMonde.setActiveangels(angelActive);
+        nouveauMonde.setScore(w.getScore());
+
+        saveWorldToXml(username, nouveauMonde);
+
+        return true;
+    }
+
+
+    public boolean updateUpgrade(String username, PallierType upgrade, String type) {
+
+        //à implementer identique en partie à updateScore()
+
+        return true;
+    }
+
+    public boolean updateAngelUpgrade(String header, PallierType upgrade, String cash) {
+
+    // à implementer
+        return true;
+    }
 }
