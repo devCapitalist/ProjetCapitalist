@@ -79,8 +79,8 @@ public class Webservices {
     @PUT
     @Path("angelupgrade")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response putangelupgrade(@Context HttpServletRequest request, PallierType upgrade) throws JAXBException {
-        if (services.updateAngelUpgrade(request.getHeader("X-user"), upgrade, "cash")) {
+    public Response putAngelUpgrade(@Context HttpServletRequest request, PallierType upgrade) throws JAXBException {
+        if (services.updateAngelUpgrade(request.getHeader("X-user"), upgrade)) {
             return Response.ok("").build();
         } else {
             return Response.notModified().build();
