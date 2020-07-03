@@ -1,0 +1,78 @@
+.unlocked{
+    opacity: 100%;
+}
+
+.locked { 
+    opacity: 50%;
+}
+
+
+
+.title{
+    color: #408c99;
+    font-size: 20px;
+}
+
+.subtitle{
+    color: #408c99;
+    font-size: 18px;
+}
+
+.card{
+    width: 400px;
+    background-color: aliceblue;
+    box-shadow: Opx 5px 20px #9999;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+.card-body {
+    text-align: left;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.card-subtitle {
+    font-size: 18px;
+}
+
+.card-title, .card-subtitle{
+    color: #408c99;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-progressbar {
+    text-align: center;
+}
+
+.card-grid {
+    width: 100%;
+    display: flex;
+}
+
+.card-grid-left{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    width: 20%;
+}
+
+.card-grid-right{
+    width: 80%;
+}
