@@ -194,7 +194,7 @@
   </managers>
   <managers>
     <pallier>
-      <name>Pandémie</name>
+      <name>Pandémie lvl 1</name>
       <logo>/icones/pandemic.png</logo>
       <seuil>5.0</seuil>
       <idcible>-1</idcible>
@@ -202,5 +202,51 @@
       <typeratio>vitesse</typeratio>
       <unlocked>false</unlocked>
     </pallier>
+    <pallier>
+      <name>Pandémie lvl 2</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Pandémie lvl 3</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Pandémie lvl 4</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Pandémie lvl 5</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Pandémie lvl 6</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+
   </managers>
 </world>
