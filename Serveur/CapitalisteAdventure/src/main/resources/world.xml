@@ -1,145 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <world>
-  <name>Virus Capitalist</name>
-  <logo>/icones/exemple.png</logo>
+  <name>VirusCap</name>
+  <logo>/icones/virus-cap-01.png</logo>
   <money>0</money>
-  <score>0</score>
-  <totalangels>0</totalangels>
-  <activeangels>0</activeangels>
-  <angelbonus>2</angelbonus>
-  <lastupdate></lastupdate>
+  <score>30000.0</score>
+  <totalangels>0.0</totalangels>
+  <activeangels>0.0</activeangels>
+  <angelbonus>0</angelbonus>
+  <lastupdate>1593772847356</lastupdate>
   <products>
     <product>
       <id>1</id>
-      <name>Virus</name>
-      <logo>/icones/Virus.jpg</logo>
-      <cout>4.00</cout>
+      <name>Virus lvl 1</name>
+      <logo>/icones/virus-cap-01.png</logo>
+      <cout>4.0</cout>
       <croissance>1.07</croissance>
-      <revenu>1.00</revenu>
-      <vitesse>500</vitesse>
+      <revenu>30000.0</revenu>
+      <vitesse>10000</vitesse>
       <quantite>1</quantite>
       <timeleft>0</timeleft>
       <managerUnlocked>false</managerUnlocked>
       <palliers>
         <pallier>
-          <name>Virus1</name>
-          <logo>/icones/Virus1.jpg</logo>
-          <seuil>25</seuil>
+          <name>adn lvl 1</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
           <idcible>1</idcible>
-          <ratio>2</ratio>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
+          <unlocked>true</unlocked>
         </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>2</id>
+      <name>Virus lvl 2</name>
+      <logo>/icones/virus-cap-02.png</logo>
+      <cout>6.0</cout>
+      <croissance>1.15</croissance>
+      <revenu>6000.0</revenu>
+      <vitesse>30000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
         <pallier>
-          <name>Virus2</name>
-          <logo>/icones/Virus2.jpg</logo>
-          <seuil>50</seuil>
-          <idcible>1</idcible>
-          <ratio>2</ratio>
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>Virus3</name>
-          <logo>/icones/Virus3.jpg</logo>
-          <seuil>100</seuil>
-          <idcible>1</idcible>
-          <ratio>2</ratio>
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>Virus4</name>
-          <logo>/icones/Virus4.jpg</logo>
-          <seuil>200</seuil>
-          <idcible>1</idcible>
-          <ratio>2</ratio>
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>Virus5</name>
-          <logo>/icones/Virus5.jpg</logo>
-          <seuil>300</seuil>
-          <idcible>1</idcible>
-          <ratio>2</ratio>²
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>Virus6</name>
-          <logo>/icones/Virus6.jpg</logo>
-          <seuil>500</seuil>
-          <idcible>1</idcible>
-          <ratio>2</ratio>
+          <name>adn lvl 2</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
+          <idcible>2</idcible>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
           <unlocked>false</unlocked>
         </pallier>
       </palliers>
     </product>
     <product>
-      <id>2</id>
-      <name>adn</name>
-      <logo>/icones/adn.jpg</logo>
-      <cout>70.00</cout>
-      <croissance>1.15</croissance>
-      <revenu>60</revenu>
-      <vitesse>3000</vitesse>
+      <id>3</id>
+      <name>Virus lvl 3</name>
+      <logo>/icones/virus-cap-03.png</logo>
+      <cout>720.0</cout>
+      <croissance>1.14</croissance>
+      <revenu>540.0</revenu>
+      <vitesse>60000</vitesse>
       <quantite>0</quantite>
       <timeleft>0</timeleft>
       <managerUnlocked>false</managerUnlocked>
       <palliers>
         <pallier>
-          <name>adn1</name>
-          <logo>/icones/adn1.jpg</logo>
-          <seuil>25</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
+          <name>adn lvl 3</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
+          <idcible>3</idcible>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
           <unlocked>false</unlocked>
         </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>4</id>
+      <name>Virus lvl 4</name>
+      <logo>/icones/virus-cap-04.png</logo>
+      <cout>8640.0</cout>
+      <croissance>1.13</croissance>
+      <revenu>4320.0</revenu>
+      <vitesse>120000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
         <pallier>
-          <name>adn2</name>
-          <logo>/icones/adn2.jpg</logo>
-          <seuil>50</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
+          <name>adn lvl 4</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
+          <idcible>4</idcible>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
           <unlocked>false</unlocked>
         </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>5</id>
+      <name>Virus lvl 5</name>
+      <logo>/icones/virus-cap-05.png</logo>
+      <cout>103680.0</cout>
+      <croissance>1.12</croissance>
+      <revenu>51840.0</revenu>
+      <vitesse>240000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
         <pallier>
-          <name>adn3</name>
-          <logo>/icones/adn3.jpg</logo>
-          <seuil>100</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
+          <name>sadn lvl 5</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
+          <idcible>5</idcible>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
           <unlocked>false</unlocked>
         </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>6</id>
+      <name>Virus lvl 6</name>
+      <logo>/icones/virus-cap-06.png</logo>
+      <cout>1250000.0</cout>
+      <croissance>1.11</croissance>
+      <revenu>650000.0</revenu>
+      <vitesse>600000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
         <pallier>
-          <name>adn4</name>
-          <logo>/icones/adn4.jpg</logo>
-          <seuil>200</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>adn5</name>
-          <logo>/icones/adn5.jpg</logo>
-          <seuil>300</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
-          <typeratio>vitesse</typeratio>
-          <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-          <name>adn6</name>
-          <logo>/icones/adn6.jpg</logo>
-          <seuil>500</seuil>
-          <idcible>2</idcible>
-          <ratio>2</ratio>
+          <name>adn lvl 6</name>
+          <logo>/icones/dna-icon-1.png</logo>
+          <seuil>50.0</seuil>
+          <idcible>6</idcible>
+          <ratio>1.2</ratio>
           <typeratio>vitesse</typeratio>
           <unlocked>false</unlocked>
         </pallier>
@@ -148,80 +150,55 @@
   </products>
   <allunlocks>
     <pallier>
-      <name>allunlocks1</name>
-      <logo>/icones/allunlocks1.jpeg</logo>
-      <seuil>250</seuil>
-      <idcible>0</idcible>
-      <ratio>2</ratio>
-      <typeratio>vitesse</typeratio>
-      <unlocked>false</unlocked>
-    </pallier>
-    <pallier>
-      <name>allunlocks2</name>
-      <logo>/icones/allunlocks2.jpg</logo>
-      <seuil>500</seuil>
-      <idcible>0</idcible>
-      <ratio>3</ratio>
+      <name>Fièvre</name>
+      <logo>/icones/fiever.png</logo>
+      <seuil>15.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>1.5</ratio>
       <typeratio>vitesse</typeratio>
       <unlocked>false</unlocked>
     </pallier>
   </allunlocks>
   <upgrades>
     <pallier>
-      <name>upgrades1</name>
-      <logo>/icones/upgrades1.jpg</logo>
-      <seuil>250000</seuil>
-      <idcible>1</idcible>
-      <ratio>3</ratio>
-      <typeratio>gain</typeratio>
-      <unlocked>false</unlocked>
-    </pallier>
-    <pallier>
-      <name>upgrades2</name>
-      <logo>/icones/upgrades2.jpg</logo>
-      <seuil>500000</seuil>
-      <idcible>2</idcible>
-      <ratio>3</ratio>
+      <name>Toux / éternuements</name>
+      <logo>/icones/toux.png</logo>
+      <seuil>10.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>2.0</ratio>
       <typeratio>gain</typeratio>
       <unlocked>false</unlocked>
     </pallier>
   </upgrades>
   <angelupgrades>
     <pallier>
-      <name>angelupgrade1</name>
-      <logo>/icones/angelupgrade1.jpg</logo>
-      <seuil>10000</seuil>
-      <idcible>0</idcible>
-      <ratio>3</ratio>
-      <typeratio>gain</typeratio>
-      <unlocked>false</unlocked>
-    </pallier>
-    <pallier>
-      <name>angelupgrade2</name>
-      <logo>/icones/angelupgrade2.jpg</logo>
-      <seuil>100000</seuil>
+      <name>Epidémie</name>
+      <logo>/icones/epidemic.png</logo>
+      <seuil>5.0</seuil>
       <idcible>-1</idcible>
-      <ratio>2</ratio>
-      <typeratio>ange</typeratio>
+      <ratio>2.0</ratio>
+      <typeratio>vitesse</typeratio>
       <unlocked>false</unlocked>
     </pallier>
   </angelupgrades>
   <managers>
     <pallier>
-      <name>manager1</name>
-      <logo>/icones/manager1.jpg</logo>
-      <seuil>1000</seuil>
-      <idcible>1</idcible>
-      <ratio>0</ratio>
+      <name>Epidémie</name>
+      <logo>/icones/epidemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>2.0</ratio>
       <typeratio>vitesse</typeratio>
       <unlocked>false</unlocked>
     </pallier>
+  </managers>
+  <managers>
     <pallier>
-      <name>manager2</name>
-      <logo>/icones/manager2.jpg</logo>
-      <seuil>10000</seuil>
-      <idcible>2</idcible>
-      <ratio>0</ratio>
+      <name>Pandémie</name>
+      <logo>/icones/pandemic.png</logo>
+      <seuil>5.0</seuil>
+      <idcible>-1</idcible>
+      <ratio>5.0</ratio>
       <typeratio>vitesse</typeratio>
       <unlocked>false</unlocked>
     </pallier>
