@@ -1,103 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <world>
-  <name>str1234</name>
-  <logo>str1234</logo>
-  <money>3.1415926535</money>
-  <score>3.1415926535</score>
-  <totalangels>3.1415926535</totalangels>
-  <activeangels>3.1415926535</activeangels>
-  <angelbonus>123</angelbonus>
-  <lastupdate>12345</lastupdate>
+  <name>Virus Capitalist</name>
+  <logo>/icones/exemple.png</logo>
+  <money>0</money>
+  <score>0</score>
+  <totalangels>0</totalangels>
+  <activeangels>0</activeangels>
+  <angelbonus>2</angelbonus>
+  <lastupdate></lastupdate>
   <products>
     <product>
-      <id>123</id>
-      <name>str1234</name>
-      <logo>str1234</logo>
-      <cout>3.1415926535</cout>
-      <croissance>3.1415926535</croissance>
-      <revenu>3.1415926535</revenu>
-      <vitesse>123</vitesse>
-      <quantite>123</quantite>
-      <timeleft>12345</timeleft>
-      <managerUnlocked>true</managerUnlocked>
+      <id>1</id>
+      <name>Virus</name>
+      <logo>/icones/Virus.jpg</logo>
+      <cout>4.00</cout>
+      <croissance>1.07</croissance>
+      <revenu>1.00</revenu>
+      <vitesse>500</vitesse>
+      <quantite>1</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
       <palliers>
         <pallier>
-          <name>str1234</name>
-          <logo>str1234</logo>
-          <seuil>3.1415926535</seuil>
-          <idcible>123</idcible>
-          <ratio>3.1415926535</ratio>
+          <name>Virus1</name>
+          <logo>/icones/Virus1.jpg</logo>
+          <seuil>25</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
           <typeratio>vitesse</typeratio>
-          <unlocked>true</unlocked>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Virus2</name>
+          <logo>/icones/Virus2.jpg</logo>
+          <seuil>50</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Virus3</name>
+          <logo>/icones/Virus3.jpg</logo>
+          <seuil>100</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Virus4</name>
+          <logo>/icones/Virus4.jpg</logo>
+          <seuil>200</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Virus5</name>
+          <logo>/icones/Virus5.jpg</logo>
+          <seuil>300</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>²
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Virus6</name>
+          <logo>/icones/Virus6.jpg</logo>
+          <seuil>500</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
         </pallier>
       </palliers>
     </product>
     <product>
-      <id>123</id>
-      <name>str1234</name>
-      <logo>str1234</logo>
-      <cout>3.1415926535</cout>
-      <croissance>3.1415926535</croissance>
-      <revenu>3.1415926535</revenu>
-      <vitesse>123</vitesse>
-      <quantite>123</quantite>
-      <timeleft>12345</timeleft>
-      <managerUnlocked>true</managerUnlocked>
+      <id>2</id>
+      <name>adn</name>
+      <logo>/icones/adn.jpg</logo>
+      <cout>70.00</cout>
+      <croissance>1.15</croissance>
+      <revenu>60</revenu>
+      <vitesse>3000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>0</timeleft>
+      <managerUnlocked>false</managerUnlocked>
       <palliers>
         <pallier>
-          <name>str1234</name>
-          <logo>str1234</logo>
-          <seuil>3.1415926535</seuil>
-          <idcible>123</idcible>
-          <ratio>3.1415926535</ratio>
+          <name>adn1</name>
+          <logo>/icones/adn1.jpg</logo>
+          <seuil>25</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
           <typeratio>vitesse</typeratio>
-          <unlocked>true</unlocked>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>adn2</name>
+          <logo>/icones/adn2.jpg</logo>
+          <seuil>50</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>adn3</name>
+          <logo>/icones/adn3.jpg</logo>
+          <seuil>100</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>adn4</name>
+          <logo>/icones/adn4.jpg</logo>
+          <seuil>200</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>adn5</name>
+          <logo>/icones/adn5.jpg</logo>
+          <seuil>300</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>adn6</name>
+          <logo>/icones/adn6.jpg</logo>
+          <seuil>500</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
         </pallier>
       </palliers>
     </product>
   </products>
   <allunlocks>
     <pallier>
-      <name>str1234</name>
-      <logo>str1234</logo>
-      <seuil>3.1415926535</seuil>
-      <idcible>123</idcible>
-      <ratio>3.1415926535</ratio>
+      <name>allunlocks1</name>
+      <logo>/icones/allunlocks1.jpeg</logo>
+      <seuil>250</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
       <typeratio>vitesse</typeratio>
-      <unlocked>true</unlocked>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>allunlocks2</name>
+      <logo>/icones/allunlocks2.jpg</logo>
+      <seuil>500</seuil>
+      <idcible>0</idcible>
+      <ratio>3</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
     </pallier>
   </allunlocks>
   <upgrades>
     <pallier>
-      <name>str1234</name>
-      <logo>str1234</logo>
-      <seuil>3.1415926535</seuil>
-      <idcible>123</idcible>
-      <ratio>3.1415926535</ratio>
-      <typeratio>vitesse</typeratio>
-      <unlocked>true</unlocked>
+      <name>upgrades1</name>
+      <logo>/icones/upgrades1.jpg</logo>
+      <seuil>250000</seuil>
+      <idcible>1</idcible>
+      <ratio>3</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>upgrades2</name>
+      <logo>/icones/upgrades2.jpg</logo>
+      <seuil>500000</seuil>
+      <idcible>2</idcible>
+      <ratio>3</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
     </pallier>
   </upgrades>
   <angelupgrades>
     <pallier>
-      <name>str1234</name>
-      <logo>str1234</logo>
-      <seuil>3.1415926535</seuil>
-      <idcible>123</idcible>
-      <ratio>3.1415926535</ratio>
-      <typeratio>vitesse</typeratio>
-      <unlocked>true</unlocked>
+      <name>angelupgrade1</name>
+      <logo>/icones/angelupgrade1.jpg</logo>
+      <seuil>10000</seuil>
+      <idcible>0</idcible>
+      <ratio>3</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>angelupgrade2</name>
+      <logo>/icones/angelupgrade2.jpg</logo>
+      <seuil>100000</seuil>
+      <idcible>-1</idcible>
+      <ratio>2</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
     </pallier>
   </angelupgrades>
   <managers>
     <pallier>
-      <name>steve</name>
-      <logo>str1234</logo>
-      <seuil>3.1415926535</seuil>
-      <idcible>123</idcible>
-      <ratio>3.1415926535</ratio>
+      <name>manager1</name>
+      <logo>/icones/manager1.jpg</logo>
+      <seuil>1000</seuil>
+      <idcible>1</idcible>
+      <ratio>0</ratio>
       <typeratio>vitesse</typeratio>
-      <unlocked>true</unlocked>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>manager2</name>
+      <logo>/icones/manager2.jpg</logo>
+      <seuil>10000</seuil>
+      <idcible>2</idcible>
+      <ratio>0</ratio>
+      <typeratio>vitesse</typeratio>
+      <unlocked>false</unlocked>
     </pallier>
   </managers>
 </world>
